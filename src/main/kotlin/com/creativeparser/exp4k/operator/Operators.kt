@@ -1,5 +1,9 @@
 package com.creativeparser.exp4k.operator
 
+
+/**
+ * Class representing the queue of allowed operators
+ */
 class Operators {
 
     private val queue = arrayOfNulls<Operator>(8)
