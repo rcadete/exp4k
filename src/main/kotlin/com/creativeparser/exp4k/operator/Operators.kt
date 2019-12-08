@@ -2,7 +2,7 @@ package com.creativeparser.exp4k.operator
 
 
 /**
- * Class representing the queue of allowed operators
+ * Class representing the queue of allowed operators.
  */
 class Operators {
 
