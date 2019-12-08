@@ -3,7 +3,10 @@ package com.creativeparser.exp4k.operator
 /**
  * Class representing operators used in an expression
  */
-abstract class Operator(val symbol: String, val numOfOperands: Int, val leftAssociative: Boolean, val unit: OperatorUnit) {
+abstract class Operator(private val symbol: String,
+                        private val numOfOperands: Int,
+                        private val leftAssociative: Boolean,
+                        private val unit: OperatorUnit) {
 
     private val ALLOWED_OPERATOR_CHARS = arrayOf('+', '-', '*', '/', '%', '^', '!', '#', ':', '~', '<', '>', '|', '=', '÷')
 

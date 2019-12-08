@@ -1,5 +1,7 @@
 package com.creativeparser.exp4k.operator
 
+import com.creativeparser.exp4k.error.ErrorCode
+
 
 /**
  * Class representing the queue of allowed operators.
@@ -37,7 +39,7 @@ class Operators {
         queue[OperatorUnit.DIVISION.index] = object : Operator("/", 2, true, OperatorUnit.DIVISION) {
             override fun apply(vararg args: Double): Double {
                 if (args[1] == 0.0) {
-                    throw ArithmeticException("Division by zero")
+                    throw ArithmeticException(ErrorCode.DIVISION_BY_ZERO.description)
                 }
                 return args[0] / args[1]
             }
@@ -50,7 +52,7 @@ class Operators {
         queue[OperatorUnit.MODULO.index] = object : Operator("%", 2, true, OperatorUnit.MODULO) {
             override fun apply(vararg args: Double): Double {
                 if (args[1] == 0.0) {
-                    throw ArithmeticException("Division by zero")
+                    throw ArithmeticException(ErrorCode.DIVISION_BY_ZERO.description)
                 }
                 return args[0] % args[1]
             }
